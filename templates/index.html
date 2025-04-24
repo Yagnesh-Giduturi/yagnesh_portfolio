@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yagnesh Giduturi - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="brand-name">Yagnesh Giduturi</span>
+                <span class="brand-designation">Data Scientist</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#welcome">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#job-roles">Job Roles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#work">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="ms-auto">
+                    <a href="{{ url_for('static', filename='assets/Yagnesh_Giduturi_Resume.pdf') }}" class="btn resume-btn" download aria-label="Download Resume">
+                        <i class="fas fa-download me-1"></i> Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="section-welcome" data-aos="zoom-in">
+        <div class="container text-center">
+            <h1>Hello, I'm Yagnesh Giduturi</h1>
+            <p>Predicting Tomorrow, Today!</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-about" data-aos="slide-right">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="about-title">About Me</h2>
+                    <p class="about-text">
+                        I'm a passionate Data Scientist with 2.4 years of experience at Unitel Software Limited, specializing in predictive modeling, data analysis, and visualization. I love turning raw data into actionable insights using tools like Python, Pandas, and Power BI. My journey is driven by curiosity and a commitment to solving real-world problems.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Roles Section -->
+    <section id="job-roles" class="section-job-roles" data-aos="flip-in-x">
+        <div class="container">
+            <h2 class="about-title">Roles I'm Open For</h2>
+            <div class="row">
+                <div class="col-md-4 col-12 mb-4" data-aos="bounce-in" data-aos-delay="0">
+                    <div class="card-base job-card">
+                        <img src="{{ url_for('static', filename='assets/data-analyst-3d.jpg') }}" alt="Data Analyst Role" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Analyst</h5>
+                            <p class="card-text">Transforming raw data into actionable insights through advanced analytics, visualizations, and reporting.</p>
+                            <p class="tech-stack"><small>Tech: Power BI, SQL, Excel</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4" data-aos="bounce-in" data-aos-delay="100">
+                    <div class="card-base job-card">
+                        <img src="{{ url_for('static', filename='assets/data-scientist-3d.jpg') }}" alt="Data Scientist Role" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Scientist</h5>
+                            <p class="card-text">Building predictive models and uncovering patterns using statistical and machine learning techniques.</p>
+                            <p class="tech-stack"><small>Tech: Python, Scikit-learn, TensorFlow</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4" data-aos="bounce-in" data-аos-delay="200">
+                    <div class="card-base job-card">
+                        <img src="{{ url_for('static', filename='assets/ml-engineer-3d.jpg') }}" alt="ML Engineer Role" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Machine Learning Engineer</h5>
+                            <p class="card-text">Designing and deploying scalable ML models for real-world applications.</p>
+                            <p class="tech-stack"><small>Tech: TensorFlow, PyTorch, Flask</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="work" class="section-work" data-aos="fade-in-up">
+        <div class="container">
+            <h2 class="about-title">My Journey</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-12" data-aos="bounce-in">
+                    <div class="card-base experience-card">
+                        <img src="{{ url_for('static', filename='assets/experience-trends-3d.png') }}" alt="Experience" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Scientist at Unitel Software Limited</h5>
+                            <p class="card-text">2022 - Present (2.4 years): Developed predictive models improving business forecasting by 15%, analyzed datasets of over 1M records, and created Power BI dashboards for 50+ stakeholders.</p>
+                            <p class="tech-stack"><small>Tech: Python, Pandas, Scikit-learn, Power BI, MySQL, Flask</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-education" data-aos="rotate-in">
+        <div class="container">
+            <h2 class="about-title">Education</h2>
+            <div class="row">
+                <div class="col-md-6 col-12 mb-4" data-aos="bounce-in" data-aos-delay="0">
+                    <div class="card-base education-card">
+                        <img src="{{ url_for('static', filename='assets/university-education-3d.png') }}" alt="B.Sc. Education" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">B.Sc. in Computer Science</h5>
+                            <p class="card-text">Adhikavi Nannayya University, 2018 - 2022</p>
+                            <p class="card-text">Aditya Degree College, Tuni.</p>
+                            <p class="tech-stack"><small>Coursework: Data Structures, Algorithms, Machine Learning, Databases</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 mb-4" data-aos="bounce-in" data-aos-delay="100">
+                    <div class="card-base education-card">
+                        <img src="{{ url_for('static', filename='assets/secondary-schooling-3d.png') }}" alt="Intermediate Education" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Intermediate</h5>
+                            <p class="card-text">Siddartha Junior College (M.P.C), 2016 - 2018</p>
+                            <p class="tech-stack"><small>Honors: Mathematics, Physics, Chemistry</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-projects" data-aos="bounce-in-down">
+        <div class="container">
+            <h2 class="about-title">Project Contributions</h2>
+            <div class="row">
+                <div class="col-md-4 col-12 mb-4" data-aos="bounce-in" data-aos-delay="0">
+                    <div class="card-base project-card">
+                        <img src="{{ url_for('static', filename='assets/energy-consumption-3d.png') }}" alt="Energy Consumption Project" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Energy Consumption Prediction</h5>
+                            <p class="card-text">Developed an ML model to forecast energy usage, predicting future consumption.</p>
+                            <p class="tech-stack"><small>Tech: Python, Pandas, Scikit-learn, TensorFlow</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4" data-aos="bounce-in" data-aos-delay="100">
+                    <div class="card-base project-card">
+                        <img src="{{ url_for('static', filename='assets/customer-intention-3d.png') }}" alt="Customer Intention Project" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Customer Intention Prediction</h5>
+                            <p class="card-text">Built a model to predict purchase intent, boosting conversion rates by 17%.</p>
+                            <p class="tech-stack"><small>Tech: Python, Pandas, XGBoost, SMOTE</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4" data-aos="bounce-in" data-aos-delay="200">
+                    <div class="card-base project-card">
+                        <img src="{{ url_for('static', filename='assets/eda-analysis-3d.png') }}" alt="EDA Project" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Exploratory Data Analysis</h5>
+                            <p class="card-text">Conducted EDA to uncover insights, visualized via interactive Power BI dashboards.</p>
+                            <p class="tech-stack"><small>Tech: Pandas, NumPy, Power BI, SQL</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4" data-aos="bounce-in" data-aos-delay="300">
+                    <div class="card-base project-card">
+                        <img src="{{ url_for('static', filename='assets/diabetes-prediction-3d.png') }}" alt="Diabetes Prediction Project" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Female Diabetes Prediction</h5>
+                            <p class="card-text">Created an ML model to predict diabetes risk, achieving 80% accuracy.</p>
+                            <p class="tech-stack"><small>Tech: Python, Scikit-learn, Pandas, NumPy</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4" data-aos="bounce-in" data-aos-delay="400">
+                    <div class="card-base project-card">
+                        <img src="{{ url_for('static', filename='assets/cars-detection-3d.png') }}" alt="Cars Detection Project" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Live Cars Detection</h5>
+                            <p class="card-text">Developed a real-time car detection system using computer vision techniques.</p>
+                            <p class="tech-stack"><small>Tech: Python, OpenCV, YOLO, TensorFlow</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 mb-4" data-aos="bounce-in" data-aos-delay="500">
+                    <div class="card-base project-card">
+                        <img src="{{ url_for('static', filename='assets/subtitles-generator-3d.jpg') }}" alt="Subtitles Generator Project" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Live Video Subtitles Generator</h5>
+                            <p class="card-text">Built a system to generate real-time subtitles for live videos using computer vision.</p>
+                            <p class="tech-stack"><small>Tech: Python, OpenCV, TensorFlow, Spacy</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-skills" data-aos="pulse">
+        <div class="container">
+            <h2 class="about-title">Skills</h2>
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-3 mb-4" data-aos="pulse-glow" data-aos-delay="0">
+                    <div class="skill-circle">
+                        <i class="fab fa-python fa-2x"></i>
+                        <p>Python</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="pulse-glow" data-aos-delay="100">
+                    <div class="skill-circle">
+                        <i class="fas fa-table fa-2x"></i>
+                        <p>Pandas</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="pulse-glow" data-aos-delay="200">
+                    <div class="skill-circle">
+                        <i class="fas fa-calculator fa-2x"></i>
+                        <p>NumPy</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="pulse-glow" data-aos-delay="300">
+                    <div class="skill-circle">
+                        <i class="fas fa-chart-line fa-2x"></i>
+                        <p>Matplotlib</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="pulse-glow" data-aos-delay="400">
+                    <div class="skill-circle">
+                        <i class="fas fa-robot fa-2x"></i>
+                        <p>Scikit-learn</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="pulse-glow" data-aos-delay="500">
+                    <div class="skill-circle">
+                        <i class="fas fa-database fa-2x"></i>
+                        <p>MySQL</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="pulse-glow" data-aos-delay="600">
+                    <div class="skill-circle">
+                        <i class="fas fa-chart-bar fa-2x"></i>
+                        <p>Power BI</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-4" data-aos="pulse-glow" data-aos-delay="700">
+                    <div class="skill-circle">
+                        <i class="fas fa-brain fa-2x"></i>
+                        <p>Flask</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+   <!-- Contact Section -->
+<section id="contact" class="section-contact" data-aos="slide-up">
+    <div class="container">
+        <h2 data-aos="fade-down" class="about-title">Get in Touch</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-12" data-aos="bounce-in">
+                <div class="card-base contact-card">
+                    <img src="{{ url_for('static', filename='assets/professional-connection-3d.png') }}" alt="Contact" class="card-img-top">
+                    <div class="card-body">
+                        <form method="POST" id="contact-form" class="contact-field">
+                            {{ form.hidden_tag() }}
+                            <div class="mb-2">
+                                <label for="name" class="form-label">Name</label>
+                                {{ form.name(class="form-control", placeholder="Your Name", required=True) }}
+                                {% if form.name.errors %}
+                                    <div class="text-danger">{{ form.name.errors[0] }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="mb-2">
+                                <label for="email" class="form-label">Email</label>
+                                {{ form.email(class="form-control", placeholder="Your Email", required=True) }}
+                                {% if form.email.errors %}
+                                    <div class="text-danger">{{ form.email.errors[0] }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="mb-2">
+                                <label for="message" class="form-label">Message</label>
+                                {{ form.message(class="form-control", rows=3, placeholder="Your Message", required=True) }}
+                                {% if form.message.errors %}
+                                    <div class="text-danger">{{ form.message.errors[0] }}</div>
+                                {% endif %}
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-2">Send Message</button>
+                            <div id="form-message" class="mt-2"></div>
+                        </form>
+                        <div class="contact-info mt-2">
+                            <p>Email: yagnesh4dspy@gmail.com</p>
+                            <p>LinkedIn: <a href="#" target="_blank">Your LinkedIn</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+        <p>© 2025 Yagnesh. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
